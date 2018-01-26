@@ -13,7 +13,9 @@ var currentLifterHeight = "ground_height"
 $(document).ready(function () {
 
     $("#camera1").attr("src", cameraStream1);
-    $("#state").attr("src", '''change these to whatever image we are using''');
+    $("#state").attr("src", "Images/cube.png");
+    $("#up").attr("src", "Images/up.png");
+    $("#down").attr("src", "Images/down.png");
     $("#compass").attr("src", '''change these to whatever image we are using''');
     $("#robotSVG").attr("xlink:href", '''change these to whatever image we are using''');
 
@@ -114,11 +116,18 @@ function onValueChanged(key, value, isNew) {
 
         case "/components/intake/cube_inside":
         	//unfinished because intake code has yet to be pushed to master
+            if (cube_inside = true ) {
+                $("#cube").attr("src", "Images/cube.png")
+            }
+            else {
+                $("#nocube").attr("src", "Images/no_cube.png")
+            }
         	break;
 
         case "/components/lifter/get_pos":
         	if (components.getInstance().get_pos = "exchange_height" && var currentLifterHeight === "ground_height") {
         		//up uppity up up
+                $("#goingup").attr("src", "Images/Going_Up.png")
         	}
         	else if (get_pos = "switch_height" && currentLifterHeight === "ground_height") {
         		//up uppity up up
@@ -152,7 +161,8 @@ function onValueChanged(key, value, isNew) {
         	}
         	else if (get_pos = "ground_height" && currentLifterHeight === "exchange_height") {
         		//down
-        	}  	
+        	}
+            break;  	
 
 
        //case "/SmartDashboard/rail_pos":
