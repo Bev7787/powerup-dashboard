@@ -100,16 +100,16 @@ function onValueChanged(key, value, isNew) {
             break;
 
         case "/FMSInfo/GameSpecificMessage":
-        	if (DriverStation.getInstance().gameSpecificMessage(0); === "R"){
+        	if (getInstance().gameSpecificMessage(0); === "R"){
         		//set right code for switch
         	}
-        	else if (DriverStation.getInstance().gameSpecificMessage(0); === "L"){
+        	else if (getInstance().gameSpecificMessage(0); === "L"){
         		//set left code for switch
         	}
-        	else if (DriverStation.getInstance().gameSpecificMessage(1); === "R"){
+        	else if (getInstance().gameSpecificMessage(1); === "R"){
         		//set right code for scale
         	}
-        	else if (DriverStation.getInstance().gameSpecificMessage(1); === "L"){
+        	else if (getInstance().gameSpecificMessage(1); === "L"){
         		//set left code for scale
         	}
         	break;
@@ -126,41 +126,52 @@ function onValueChanged(key, value, isNew) {
 
         case "/components/lifter/get_pos":
         	if (components.getInstance().get_pos = "exchange_height" && var currentLifterHeight === "ground_height") {
-        		//up uppity up up
+        		//going up
                 $("#goingup").attr("src", "Images/Going_Up.png")
         	}
         	else if (get_pos = "switch_height" && currentLifterHeight === "ground_height") {
-        		//up uppity up up
+        		//going up
+                $("#goingup").attr("src", "Images/Going_Up.png")
         	}
         	else if (get_pos = "scale_height" && currentLifterHeight === "ground_height") {
-        		//up uppity up up
+        		//going up
+                $("#goingup").attr("src", "Images/Going_Up.png")
         	} 
         	else if (get_pos = "switch_height" && currentLifterHeight === "exchange_height") {
-        		//up uppity up up
+        		//going up
+                $("#goingup").attr("src", "Images/Going_Up.png")
         	}
         	else if (get_pos = "scale_height" && currentLifterHeight === "exchange_height") {
-        		//up uppity up up
+        		//going up
+                $("#goingup").attr("src", "Images/Going_Up.png")
         	} 
         	else if (get_pos = "scale_height" && currentLifterHeight === "switch_height") {
-        		//up uppity up up
+        		//going up
+                $("#goingup").attr("src", "Images/Going_Up.png")
         	}  
         	else if (get_pos = "ground_height" && currentLifterHeight === "scale_height") {
         		//down
+                $("#goingdown").attr("src", "Images/Going_Down.png")
         	}      
         	else if (get_pos = "exchange_height" && currentLifterHeight === "scale_height") {
         		//down
+                $("#goingdown").attr("src", "Images/Going_Down.png")
         	}  
         	else if (get_pos = "switch_height" && currentLifterHeight === "scale_height") {
         		//down
+                $("#goingdown").attr("src", "Images/Going_Down.png")
         	}     
         	else if (get_pos = "exchange_height" && currentLifterHeight === "switch_height") {
         		//down
+                $("#goingdown").attr("src", "Images/Going_Down.png")
         	}   
         	else if (get_pos = "ground_height" && currentLifterHeight === "switch_height") {
         		//down
+                $("#goingdown").attr("src", "Images/Going_Down.png")
         	}
         	else if (get_pos = "ground_height" && currentLifterHeight === "exchange_height") {
         		//down
+                $("#goingdown").attr("src", "Images/Going_Down.png")
         	}
             break;  	
 
