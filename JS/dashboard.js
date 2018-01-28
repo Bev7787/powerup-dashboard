@@ -16,8 +16,8 @@ $(document).ready(function () {
     $("#state").attr("src", "Images/cube.png");
     $("#up").attr("src", "Images/up.png");
     $("#down").attr("src", "Images/down.png");
-    $("#compass").attr("src", '''change these to whatever image we are using''');
-    $("#robotSVG").attr("xlink:href", '''change these to whatever image we are using''');
+    //$("#compass").attr("src", '''change these to whatever image we are using''');
+    //$("#robotSVG").attr("xlink:href", '''change these to whatever image we are using''');
 
 
     // sets a function that will be called when the websocket connects/disconnects
@@ -29,7 +29,7 @@ $(document).ready(function () {
 
     // sets a function that will be called when any NetworkTables key/value changes
     NetworkTables.addGlobalListener(onValueChanged, true);
-
+sssaaaaa
     // hook up our SendableChoosers to combo boxes
     attachSelectToSendableChooser("#auto-select", "/SmartDashboard/Autonomous Mode");
 });
@@ -173,7 +173,7 @@ function onValueChanged(key, value, isNew) {
         		//down
                 $("#goingdown").attr("src", "Images/Going_Down.png")
         	}
-            break;  	
+            break;
 
 
        //case "/SmartDashboard/rail_pos":
@@ -254,5 +254,19 @@ function rotateCompass(heading) {
     heading = Math.PI - heading; // gyro is the wrong way around
     var robot = document.getElementById("compass");
     robot.style.transform = "rotate(" + heading + "rad)";
+    
+}
+function onRobotConnection(connected) {
+    if (connected) {
+        $("#Connection").text("Connected");
+        $("#Connection").css({
+            "color": "lime"
+        });
+    } else {
+        $("#Connection").text("Disconnected");
+        $("#Connection").css({
+            "color": "red"
+        });
 
+    }
 }
