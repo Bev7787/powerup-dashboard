@@ -129,47 +129,47 @@ function onValueChanged(key, value, isNew) {
         		//going up
                 $("#goingup").attr("src", "Images/Going_Up.png")
         	}
-        	else if (get_pos = "switch_height" && currentLifterHeight === "ground_height") {
+        	else if (get_pos === "switch_height" && currentLifterHeight === "ground_height") {
         		//going up
                 $("#goingup").attr("src", "Images/Going_Up.png")
         	}
-        	else if (get_pos = "scale_height" && currentLifterHeight === "ground_height") {
+        	else if (get_pos === "scale_height" && currentLifterHeight === "ground_height") {
         		//going up
                 $("#goingup").attr("src", "Images/Going_Up.png")
         	} 
-        	else if (get_pos = "switch_height" && currentLifterHeight === "exchange_height") {
+        	else if (get_pos === "switch_height" && currentLifterHeight === "exchange_height") {
         		//going up
                 $("#goingup").attr("src", "Images/Going_Up.png")
         	}
-        	else if (get_pos = "scale_height" && currentLifterHeight === "exchange_height") {
+        	else if (get_pos === "scale_height" && currentLifterHeight === "exchange_height") {
         		//going up
                 $("#goingup").attr("src", "Images/Going_Up.png")
         	} 
-        	else if (get_pos = "scale_height" && currentLifterHeight === "switch_height") {
+        	else if (get_pos === "scale_height" && currentLifterHeight === "switch_height") {
         		//going up
                 $("#goingup").attr("src", "Images/Going_Up.png")
         	}  
-        	else if (get_pos = "ground_height" && currentLifterHeight === "scale_height") {
+        	else if (get_pos === "ground_height" && currentLifterHeight === "scale_height") {
         		//down
                 $("#goingdown").attr("src", "Images/Going_Down.png")
         	}      
-        	else if (get_pos = "exchange_height" && currentLifterHeight === "scale_height") {
+        	else if (get_pos === "exchange_height" && currentLifterHeight === "scale_height") {
         		//down
                 $("#goingdown").attr("src", "Images/Going_Down.png")
         	}  
-        	else if (get_pos = "switch_height" && currentLifterHeight === "scale_height") {
+        	else if (get_pos === "switch_height" && currentLifterHeight === "scale_height") {
         		//down
                 $("#goingdown").attr("src", "Images/Going_Down.png")
         	}     
-        	else if (get_pos = "exchange_height" && currentLifterHeight === "switch_height") {
+        	else if (get_pos === "exchange_height" && currentLifterHeight === "switch_height") {
         		//down
                 $("#goingdown").attr("src", "Images/Going_Down.png")
         	}   
-        	else if (get_pos = "ground_height" && currentLifterHeight === "switch_height") {
+        	else if (get_pos === "ground_height" && currentLifterHeight === "switch_height") {
         		//down
                 $("#goingdown").attr("src", "Images/Going_Down.png")
         	}
-        	else if (get_pos = "ground_height" && currentLifterHeight === "exchange_height") {
+        	else if (get_pos === "ground_height" && currentLifterHeight === "exchange_height") {
         		//down
                 $("#goingdown").attr("src", "Images/Going_Down.png")
         	}
