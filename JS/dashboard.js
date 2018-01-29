@@ -79,6 +79,21 @@ function onNetworkTablesConnection(connected) {
     }
 }
 
+function LeftSwitchAndScale() {
+
+}
+function RightSwitchAndScale() {
+
+}
+
+function LeftSwitchAndScale() {
+
+}
+
+function RightSwitchAndScale() {
+    
+}
+
 function onValueChanged(key, value, isNew) {
     switch (key) {
         case "/robot/mode":
