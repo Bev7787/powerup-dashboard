@@ -1,5 +1,6 @@
 var currentGyro = 0;
 var offsetGyro = 0;
+var Timer = 0;
 
 $(document).ready(function() {
 
@@ -115,6 +116,10 @@ function timerCycle() {
             document.getElementById("timer").innerHTML = difference;
         }
     }, 1000);
+}
+
+function resetTimer() {
+    document.getElementByID("timer").innerHTML = "135"
 }
 
 function rotateCompass(heading) {
