@@ -1,6 +1,8 @@
 var currentGyro = 0;
 var offsetGyro = 0;
 var Timer = 0;
+var countDownDate = 0;
+var now = 0;
 
 $(document).ready(function() {
 
@@ -96,13 +98,20 @@ function remove_form() {
     $(".hiddengyro").show();
 }
 
-function timerCycle() {
-    var countDownDate = Math.floor(Date.now() / 1000) + 135;
-    setInterval(function() {
-        var now = Math.floor(Date.now() / 1000);
-        var difference = countDownDate - now;
+function timerInit() {
+    countDownDate = Math.floor(Date.now() / 1000) + 135;
+    now = Math.floor(Date.now() / 1000);
+}
 
-        if (difference <= 0) {
+function timerCycle() {
+    setInterval(function() {;
+        now = Math.floor(Date.now() / 1000)
+        var difference = countDownDate - now;
+        if ("/robot/mode" === "disabled") {
+            return;
+        }
+
+        else if (difference <= 0) {
             document.getElementById("timer").innerHTML = "";
             $("#timer").text("GOOD JOB!");
             $("#timer").css("font-size", "425%");
