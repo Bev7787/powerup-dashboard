@@ -103,11 +103,11 @@ function remove_form() {
 function timerInit() {
     countDownDate = Math.floor(Date.now() / 1000) + 134;
     now = Math.floor(Date.now() / 1000);
-    difference = countDownDate - now;
-    difference = Timer
+    Timer = 135
 }
 
 function timerCycle() {
+    difference = countDownDate - now;
     setInterval(function() {;
         Timer = difference
         if ("/robot/mode" === "disabled") {
