@@ -3,6 +3,7 @@ var offsetGyro = 0;
 var Timer = 0;
 var countDownDate = 0;
 var now = 0;
+var difference = 0;
 
 $(document).ready(function() {
 
@@ -99,15 +100,16 @@ function remove_form() {
 }
 
 function timerInit() {
-    countDownDate = Math.floor(Date.now() / 1000) + 135;
-    now = Math.floor(Date.now() / 1000);
+    countDownDate = Math.floor(Date.now() / 1000) + 134;
 }
 
 function timerCycle() {
+    now = Math.floor(Date.now() / 1000);
+    difference = countDownDate - now;
     setInterval(function() {;
-        now = Math.floor(Date.now() / 1000)
-        var difference = countDownDate - now;
+        Timer == difference
         if ("/robot/mode" === "disabled") {
+            difference == Timer;
             return;
         }
 
@@ -124,6 +126,8 @@ function timerCycle() {
         } else {
             document.getElementById("timer").innerHTML = difference;
         }
+        now = Math.floor(Date.now() / 1000)
+        difference = countDownDate - now;       
     }, 1000);
 }
 
