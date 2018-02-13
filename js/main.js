@@ -57,6 +57,7 @@ function onValueChanged(key, value) {
             break;
         case "/robot/mode":
             if (value === "teleop") {
+                timerInit();
                 timerCycle();
             }
             if (value != "disabled") {
@@ -101,15 +102,16 @@ function remove_form() {
 
 function timerInit() {
     countDownDate = Math.floor(Date.now() / 1000) + 134;
+    now = Math.floor(Date.now() / 1000);
+    difference = countDownDate - now;
+    difference = Timer
 }
 
 function timerCycle() {
-    now = Math.floor(Date.now() / 1000);
-    difference = countDownDate - now;
     setInterval(function() {;
-        Timer == difference
+        Timer = difference
         if ("/robot/mode" === "disabled") {
-            difference == Timer;
+            difference = Timer;
             return;
         }
 
